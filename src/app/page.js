@@ -8,8 +8,7 @@ export default function Home() {
           Welcome to <span className="text-primary">TECHNICODERS</span>
         </h1>
         <p className="text-2xl">
-          This is a <span className="text-primary">TECHNICODERS</span> project
-          created with Next js
+          Próximamente se podrá acceder a la página de inicio de TECHNICODERS
           
         </p>
         
