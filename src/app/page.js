@@ -9,15 +9,8 @@ export default function Home() {
         </h1>
         <p className="text-2xl">
           This is a <span className="text-primary">TECHNICODERS</span> project
-          created with{" "}
-          <a
-            className="text-primary"
-            href="https://create.t3.gg"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            create.t3.gg
-          </a>
+          created with Next js
+          
         </p>
         
       </main>
