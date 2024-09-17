@@ -4,7 +4,7 @@ export default function Home() {
     return (
         <div className="items-center justify-items-center w-full min-h-screen font-[family-name:var(--font-geist-sans)]">
             <main className="flex flex-col w-full h-screen row-start-2 items-center sm:items-start">
-                <section className="flex flex-col items-center bg-[url(/assets/images/img-hero.webp)] bg-cover bg-center bg-no-repeat w-full h-screen p-[10%]">
+                <section className="flex flex-col items-center bg-[url(/assets/images/img-h.webp)] bg-cover bg-center bg-no-repeat w-full h-screen p-[10%]">
                     <header className="absolute flex top-8 left-0 w-full items-center justify-center ">
                            <div className="flex items-center justify-start w-[90%] bg-[#0D333F] rounded-3xl px-[60px] py-2">
                                 <img src="/assets/images/brand.webp" alt="logo" className="" />
