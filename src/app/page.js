@@ -6,7 +6,7 @@ export default function Home() {
             <main className="flex flex-col w-full h-screen row-start-2 items-center sm:items-start">
                 <section className="flex flex-col items-center bg-[url(/assets/images/img-h.webp)] bg-cover bg-center bg-no-repeat w-full h-screen p-[10%]">
                     <header className="absolute flex top-8 left-0 w-full items-center justify-center ">
-                           <div className="flex items-center justify-start w-[90%] bg-[#0D333F] rounded-3xl px-[60px] py-2">
+                           <div className="flex items-center justify-start w-[90%] bg-[#0e1629bf] rounded-3xl px-[60px] py-2">
                                 <img src="/assets/images/brand.webp" alt="logo" className="" />
                                 <nav className="w-[100%] flex items-center justify-around">
                                     <ul className="flex gap-x-16 items-center justify-center">
