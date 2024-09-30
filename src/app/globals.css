@@ -30,4 +30,22 @@ body {
   .text-balance {
     text-wrap: wrap;
   }
+  .button-cto {
+    border: 3px solid;
+    border-image-source: linear-gradient(90deg, #06D5B9 0%, #00C1D8 100%);
+    border-image-slice: 1;
+    border-radius: 50%;
+  }
+}
+.gradient-border-button {
+  padding: 15px 30px; /* Espaciado interno */
+  background-color: white; /* Fondo del botón */
+  color: #06D5B9; /* Color del texto */
+  font-size: 1.25rem; /* Tamaño del texto */
+  border: 3px solid transparent; /* Borde transparente para el efecto */
+  border-radius: 50%; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar por encima */
+  outline: none; /* Elimina el contorno predeterminado */
+  border-image: linear-gradient(90deg, #06D5B9 0%, #00C1D8 100%); /* Gradiente en el borde */
+  border-image-slice: 1; /* Asegura que el borde se llene completamente con el gradiente */
 }
