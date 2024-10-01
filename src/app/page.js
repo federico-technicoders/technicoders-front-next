@@ -177,7 +177,7 @@ export default function Home() {
                             <div className="relative border border-[#06D5B9] rounded-3xl">
                                 <div className="absolute flex flex-col justify-center items-center gap-2 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full p-[10%] mt-10">
                                     <h3><SpanGradient>Marketing digital y SEO</SpanGradient></h3>
-                                    <p className="text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five </p>
+                                    <p className="text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five </p>
                                 </div>
                                 <img src="/assets/images/card.webp" alt="logo" className="rounded-3xl w-full" loading="lazy"/>
                             </div>
