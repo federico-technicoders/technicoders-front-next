@@ -37,15 +37,24 @@ body {
     border-radius: 50%;
   }
 }
-.gradient-border-button {
-  padding: 15px 30px; /* Espaciado interno */
-  background-color: white; /* Fondo del botón */
-  color: #06D5B9; /* Color del texto */
-  font-size: 1.25rem; /* Tamaño del texto */
-  border: 3px solid transparent; /* Borde transparente para el efecto */
-  border-radius: 50%; /* Bordes redondeados */
-  cursor: pointer; /* Cambia el cursor al pasar por encima */
-  outline: none; /* Elimina el contorno predeterminado */
-  border-image: linear-gradient(90deg, #06D5B9 0%, #00C1D8 100%); /* Gradiente en el borde */
-  border-image-slice: 1; /* Asegura que el borde se llene completamente con el gradiente */
+h1{
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 88px;
+  line-height: 110px;
+}
+
+h3 {
+  font-size: 32px;
+}
+
+p {
+  font-size: 20px;
+}
+
+.hr-footer {
+  border: 1px solid;
+  border-image-source: linear-gradient(90deg, #06D5B9 0%, #00C1D8 100%);
 }
