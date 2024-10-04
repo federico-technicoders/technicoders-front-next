@@ -14,7 +14,7 @@ const VideoWraper = ({video}) => {
             loop={true} 
             preload="auto" 
             poster={video.poster} 
-            className="top-0 left-0 w-full min-w-full h-screen object-cover -z-10"
+            className="top-0 left-0 w-full min-w-full object-cover -z-10"
         >
             <source src={video.source} type="video/mp4" />
         </video>

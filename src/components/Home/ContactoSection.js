@@ -7,7 +7,7 @@ import { TitleSection } from "../ui/TitleSection/TitleSection"
 export const ContactoSection = () => {
     return (
         <SectionPage>
-            <div className="flex flex-col justify-center items-center gap-8 w-full px-[5%] py-[10%]">
+            <div className="flex flex-col justify-center items-center gap-8 w-full px-[5%] py-[10%] bg-[#0E1629]">
                 <TitleSection>
                     <SpanGradient>¿Hablamos?</SpanGradient><br/>
                     ¡Cuéntame tus ideas!

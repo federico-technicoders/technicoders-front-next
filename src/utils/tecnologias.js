@@ -53,12 +53,12 @@ export const tecnologias2 = [
     },
     {
         name: 'ClowdFlare',
-        image: '/assets/images/tecnologias/clowdflare.svg',
+        image: '/assets/images/tecnologias/cloudflare.svg',
         description: 'ClowdFlare es un servicio de Cloudflare que permite a los desarrolladores crear y personalizar páginas web de manera sencilla y rápida.'
     },
     {
         name: 'ClowdWays',
-        image: '/assets/images/tecnologias/clowdways.svg',  
+        image: '/assets/images/tecnologias/cloudways.svg',  
         description: 'ClowdWays es un servicio de Cloudflare que permite a los desarrolladores crear y personalizar páginas web de manera sencilla y rápida.'
     },
     {

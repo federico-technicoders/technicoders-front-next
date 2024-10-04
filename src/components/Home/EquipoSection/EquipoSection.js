@@ -34,7 +34,7 @@ const equipo = [
 
 const Empleado = ({item}) => {
     return (
-        <div className="relative h-[500px]">
+        <div className="relative h-[500px] bg-[#0E1629]">
             <img src={item.image} alt="logo" className="w-ful h-full" loading="lazy"/>
             <div className="absolute bottom-8 flex flex-col justify-center items-center gap-2 w-full">
                 <h3 className="font-semibold">Federico Osandón</h3>
@@ -59,7 +59,7 @@ const EmpleadosList = ({equipo}) => {
 export const EquipoSection = () => {
     return (
         <SectionPage>
-            <div className="flex flex-col gap-8 items-center justify-center w-full px-[5%] py-[10%]">
+            <div className="flex flex-col gap-8 items-center justify-center w-full  py-[10%]">
                 <TitleSection>Somos el <SpanGradient>equipo</SpanGradient></TitleSection>
                 <Swiper
                     slidesPerView={4}
