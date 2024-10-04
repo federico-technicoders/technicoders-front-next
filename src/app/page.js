@@ -25,7 +25,7 @@ export default function Home() {
             <main className="relative flex flex-col w-full min-h-screen row-start-2 items-center sm:items-start">
                 <HeroSection />
                 <NextSection />
-                <CoheteSection />
+                {/* <CoheteSection />
                 <SocioEstrategicoSection />
                 <VideoSection />
                 <SolucionesSection/>
@@ -33,7 +33,7 @@ export default function Home() {
                 <EquipoSection />
                 <TecnologiasSection />
                 <TestimonioSection />
-                <ContactoSection />            
+                <ContactoSection />             */}
             </main>
             {/* <Footer /> */}
         </div>
