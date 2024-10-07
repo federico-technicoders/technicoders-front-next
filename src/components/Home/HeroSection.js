@@ -22,10 +22,13 @@ export const HeroSection = () => {
     )
     
     return (
-        <section  className="sticky top-0 flex justify-start items-start w-full  text-white -z-10">
+        <section  
+            ref={ container }
+            className="relative fex justify-start items-start w-full  text-white -z-10"
+        >
             <div className="relative flex flex-col justify-center items-center w-full h-screen px-[5%] pt-[10%] ">                    
                 <div 
-                    ref={ container }
+                    
                     className="relative flex flex-col gap-y-20 items-end justify-start w-[100%] h-full"
                 >
                     <div className="absolute left-0 bottom-0 flex flex-col gap- items-start justify-start w-[100%]">

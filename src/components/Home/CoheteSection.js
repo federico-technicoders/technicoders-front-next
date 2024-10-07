@@ -1,3 +1,4 @@
+'use client'
 import { SectionPage } from "../SectionPage/SectionPage"
 import { ButtonCto } from "../ui/ButtonCto/ButtonCto"
 
@@ -37,7 +38,7 @@ export const CoheteSection = () => {
                         Saber más
                     </ButtonCto>
                 </div>
-                <img src="/assets/images/cohete.webp" alt="logo" className="absolute right-0 -bottom-48 z-0" data-scroll data-scroll-speed='.3' loading="lazy"/>
+                <img src="/assets/images/cohete.webp" alt="logo" className="absolute right-0 -bottom-48 z-0" data-scroll data-scroll-speed='.2' loading="lazy"/>
             </div>
         </section>
     )
