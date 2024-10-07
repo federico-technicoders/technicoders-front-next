@@ -5,7 +5,9 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 // import { useGsap } from '@gsap/react'
 import { useGSAP } from '@gsap/react'
 
-gsap.registerPlugin(ScrollTrigger)
+if (typeof window !== 'undefined') {
+  gsap.registerPlugin(ScrollTrigger, useGSAP);
+}
 
 export const NextSection = () => {
   const sectionRef = useRef()
