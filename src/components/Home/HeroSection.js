@@ -22,7 +22,7 @@ export const HeroSection = () => {
     )
     
     return (
-        <section  className="sticky top-0 flex justify-start items-start w-full  text-white">
+        <section  className="sticky top-0 flex justify-start items-start w-full  text-white -z-10">
             <div className="relative flex flex-col justify-center items-center w-full h-screen px-[5%] pt-[10%] ">                    
                 <div 
                     ref={ container }

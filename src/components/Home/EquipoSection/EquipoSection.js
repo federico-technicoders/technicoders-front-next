@@ -34,7 +34,7 @@ const equipo = [
 
 const Empleado = ({item}) => {
     return (
-        <div className="relative h-[500px] bg-[#0E1629]">
+        <div className="relative h-[500px]">
             <img src={item.image} alt="logo" className="w-ful h-full" loading="lazy"/>
             <div className="absolute bottom-8 flex flex-col justify-center items-center gap-2 w-full">
                 <h3 className="font-semibold">Federico Osandón</h3>

@@ -12,7 +12,7 @@ import 'swiper/css/navigation'
 export const TestimonioSection = () => {
     return (
         <SectionPage>
-            <div className="top-0 left-0 flex flex-col items-center justify-start w-full  bg-white px-[5%] py-[10%] text-black text-center">
+            <div className="top-0 left-0 flex flex-col items-center justify-start w-full e px-[5%] py-[10%] text-white text-center">
                 <TitleSection><SpanGradient>Testimonios</SpanGradient> de marcas que redefinieron su camino</TitleSection>  
                 <Swiper
                     cssMode={true}
