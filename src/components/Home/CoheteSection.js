@@ -1,10 +1,36 @@
 'use client'
+import { useRef } from "react"
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { useGSAP } from "@gsap/react"
+
 import { SectionPage } from "../SectionPage/SectionPage"
 import { ButtonCto } from "../ui/ButtonCto/ButtonCto"
 
+gsap.registerPlugin(ScrollTrigger)
+
+
 export const CoheteSection = () => {
+    const choeteSectionRef = useRef()
+    // useGSAP(()=>{
+    //     let eventos = gsap.timeline({
+    //         scrollTrigger: {
+    //             trigger: choeteSectionRef.current,
+    //             // markers: true,
+    //             scrub: 8,
+    //             pin: true,
+    //             end: 'bottom top',
+    //             pinSpacing: false,
+    //         },
+    //     })
+
+    // })
+
     return (
-        <section className="cohete-section relative flex justify-start items-start w-full  text-white bg-[#0E1629]">
+        <section 
+            ref={choeteSectionRef}
+            className="cohete-section relative flex justify-start items-start w-full  text-white bg-[#0E1629]"
+        >
             <div  className="relative px-[5%] py-[10%] w-full">
                 <div className="flex flex-col justify-start items-start gap-8">
                     <h2 className="text-[90px] text-white leading-none font-semibold mt-16">
@@ -38,7 +64,7 @@ export const CoheteSection = () => {
                         Saber más
                     </ButtonCto>
                 </div>
-                <img src="/assets/images/cohete.webp" alt="logo" className="absolute right-0 -bottom-48 z-0" data-scroll data-scroll-speed='.2' loading="lazy"/>
+                <img src="/assets/images/cohete.webp" alt="logo" className="absolute right-0 -bottom-24 z-0" data-scroll data-scroll-speed='.3' loading="lazy"/>
             </div>
         </section>
     )

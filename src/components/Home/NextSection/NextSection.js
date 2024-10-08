@@ -18,13 +18,14 @@ export const NextSection = () => {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: sectionRef.current,
-                start: 'center center', // Inicia cuando el section esté en el centro
-                end: '+=25%', // Define el rango del scroll
+                start: 'top center', // Inicia cuando el section esté en el centro
+                end: '+=50%', // Define el rango del scroll
                 scrub: 1.5,
                 pin: true,
+                pinSpacing: false
                 // markers: true, // Descomenta para depurar
             }
-        });
+        })
         
         // Fase 1: Subir y expandir
         tl.fromTo(
@@ -35,10 +36,10 @@ export const NextSection = () => {
                 borderRadius: '0px', // Bordes cuadrados
                 duration: 1.5 // Tiempo de expansión
             }
-        );
+        )
         
         // Pausa para que se quede ampliado
-        tl.to(boxRef.current, { scale: 1, duration: 2, ease: "none" }); // Mantiene el estado ampliado durante 1 segundo
+        tl.to(boxRef.current, { scale: 1, duration: 2, ease: "none" })// Mantiene el estado ampliado durante 1 segundo
         
         // Fase 2: Contraer de nuevo
         tl.fromTo(
@@ -49,7 +50,8 @@ export const NextSection = () => {
                 borderRadius: '26px', // Vuelve a los bordes redondeados si lo deseas
                 duration: 1.5 // Tiempo de contracción
             }
-        );
+        )
+
         
         // gsap.fromTo(
         //   boxRef.current,
@@ -104,7 +106,7 @@ export const NextSection = () => {
         <section ref={sectionRef} className=" next-section w-full h-screen flex items-center justify-center z-10">
         <div
             ref={boxRef}
-            className="w-full h-screen bg-emerald-500 flex items-center justify-center"
+            className="w-full h-screen bg-white flex items-center justify-center"
         >
             <h2 className="text-white text-2xl text-center">Segunda Sección</h2>
         </div>

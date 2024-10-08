@@ -4,7 +4,7 @@ import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import LocomotiveScroll from 'locomotive-scroll'
-
+import { ReactLenis } from "@studio-freight/react-lenis";
 import { NavBar } from "@/components/NavBar/NavBar"
 import { Footer } from "@/components/Footer"
 import { 
@@ -66,9 +66,9 @@ export default function Home() {
                 trigger: sectionRef.current,
                 start: 'center center', // Inicia cuando el section esté en el centro
                 end: '+=15%', // Define el rango del scroll
-                scrub: 2,
+                scrub: 3,
                 pin: true,
-                // markers: true, // Descomenta para depurar
+                markers: true, // Descomenta para depurar
             }
         });
         
@@ -101,7 +101,7 @@ export default function Home() {
                 borderRadius: '26px', 
             }, // Estado expandido
             {
-                scale: 0.5, // Se contrae
+                scale: 0.9, // Se contrae
                 borderRadius: '26px', // Vuelve a los bordes redondeados si lo deseas
                 duration: 1.5 // Tiempo de contracción
             }
@@ -111,6 +111,7 @@ export default function Home() {
 
    
     return (
+        <ReactLenis root options={{ lerp: 0.1, duration: 2, smoothTouch: true }}>
         <div className="items-center justify-items-center w-full min-h-screen font-[family-name:var(--font-geist-sans)]">
             <NavBar />
             <main className="relative flex flex-col w-full min-h-screen row-start-2 items-center sm:items-start">
@@ -155,7 +156,7 @@ export default function Home() {
                 <section ref={sectionRef} className="next-section w-full h-screen flex items-center justify-center z-10 bg-[#0E1629] ]">
                     <div
                         ref={boxRef}
-                        className="w-full h-screen bg-emerald-500 flex items-center justify-center"
+                        className="w-full h-screen bg-white flex items-center justify-center"
                     >
                         <h2 className="text-white text-2xl text-center">Segunda Sección</h2>
                     </div>
@@ -172,7 +173,7 @@ export default function Home() {
             </main>
             <Footer />
         </div>
+        </ReactLenis>
     )
 }
-
 
