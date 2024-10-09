@@ -1,6 +1,10 @@
 import localFont from "next/font/local"
+// import { Red_Hat_Display } from 'next/font/google'
+
+// Supports weights 300-900
+// import redHat from '@fontsource-variable/red-hat-display'
 import "./globals.css"
-import Head from "next/head"
+// import Head from "next/head"
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -12,6 +16,11 @@ const geistMono = localFont({
   variable: "--font-geist-mono",
   weight: "100 900",
 })
+
+// const redHat = Red_Hat_Display({
+//   subsets: ["latin"],
+//   // weight: "100 900"
+// })
 
 export const metadata = {
   title: "WEB TECHNICODERS",

@@ -12,15 +12,14 @@ import {
     CompaniasSection, 
     ContactoSection, 
     EquipoSection, 
-    HeroSection, 
-    NextSection, 
+    SectionVideoPresentation,
     SocioEstrategicoSection, 
     SolucionesSection, 
     TecnologiasSection, 
     TestimonioSection, 
     VideoSection 
 } from "@/components/Home"
-
+// import '@fontsource-variable/red-hat-display'
 import 'swiper/css'
 
 if (typeof window !== 'undefined') {
@@ -48,9 +47,9 @@ export default function Home() {
                     scrollTrigger: {
                       trigger: heroSection.current,
                       start: 'top top',
-                      endTrigger: heroSection.current, 
+                    //   endTrigger: heroSection.current, 
                     //   end: 'top center',
-                    //   end: "+=100%",
+                      end: "+=280%",
                       pin: true,
                     //   markers: true, 
                       
@@ -68,7 +67,7 @@ export default function Home() {
                 end: '+=15%', // Define el rango del scroll
                 scrub: 3,
                 pin: true,
-                markers: true, // Descomenta para depurar
+                // markers: true, // Descomenta para depurar
             }
         });
         
@@ -153,14 +152,15 @@ export default function Home() {
                         </video>
                     </div>
                 </section>
-                <section ref={sectionRef} className="next-section w-full h-screen flex items-center justify-center z-10 bg-[#0E1629] ]">
+                {/* <section ref={sectionRef} className="next-section w-full h-screen flex items-center justify-center z-10 bg-[#0E1629] ]">
                     <div
                         ref={boxRef}
                         className="w-full h-screen bg-white flex items-center justify-center"
                     >
                         <h2 className="text-white text-2xl text-center">Segunda Sección</h2>
                     </div>
-                </section>
+                </section> */}
+                <SectionVideoPresentation />
                 <CoheteSection />
                 <SocioEstrategicoSection />
                 <VideoSection />

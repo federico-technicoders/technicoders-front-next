@@ -6,14 +6,17 @@ import { TitleSection } from "../ui/TitleSection/TitleSection"
 
 export const ContactoSection = () => {
     return (
-        <SectionPage>
-            <div className="flex flex-col justify-center items-center gap-8 w-full px-[5%] py-[10%] bg-[#0E1629]">
-                <TitleSection>
-                    <SpanGradient>¿Hablamos?</SpanGradient><br/>
-                    ¡Cuéntame tus ideas!
+        <section  className="relative flex justify-start items-start w-full  text-white bg-[#0E1629] z-10">
+            <div className="flex flex-col justify-start items-center w-full px-[5%] py-[10%] bg-[#0E1629] z-10">
+                <div className="flex flex-col gap-16 w-[60%]">
+                <TitleSection
+                    size='104px'
+                    bold='font-semibold'
+                >
+                    <SpanGradient>¡Cuéntanos</SpanGradient><br/>
+                    tus ideas!
                 </TitleSection>
                 <p>¿Tienes alguna pregunta? Estamos aquí para ayudarte. Completa el formulario y nos pondremos<br/> en contacto contigo lo antes posible. ¡Nos encantaría saber de ti!</p>
-                <div className="w-[65%] mt-16">
                     <form>
                         <input 
                             type="text" 
@@ -43,12 +46,12 @@ export const ContactoSection = () => {
                         />
                         <span className="">He leído y aceptro el <a href="#">Aviso legal</a> y <a href="#">Política de privacidad</a></span>
                         </label>
-                        <div className="text-center w-full mt-12">
+                        <div className=" w-full mt-12">
                             <ButtonCto>Enviar</ButtonCto>
                         </div>
                     </form>
                 </div>
             </div>
-        </SectionPage>
+        </section>
     )
 }

@@ -1,53 +1,89 @@
+import { useRef } from "react"
+import { useGSAP } from "@gsap/react"
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { iconosRedes } from "@/utils/iconosRedes"
 import { SpanGradient } from "../ui/SpanGradient/SpanGradient"
 
 
 
 export const Footer = () => {
+    const sectionRef = useRef(null)
+    const footerRef = useRef(null)
+
+
+
+    useGSAP(() => {
+        const sectionElement = sectionRef.current
+        const footerElement = footerRef.current
+
+        let tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: footerElement, // Sincronizar con el footer
+                start: "bottom bottom", // Empieza al llegar al final del footer
+                end: "bottom bottom", // Añadir desplazamiento para controlar cuánto se despliega la sección
+                scrub: 3, // Anima con el scroll
+                markers: true, // Quitar en producción
+            }
+        })
+
+        // Animación para que la sección aparezca detrás del footer y se despliegue hacia abajo
+        tl.fromTo(
+            sectionElement,
+            {
+                y: "-100%", // Posicionar detrás del footer al inicio
+                zIndex: -20, // Posicionar detrás del footer
+            },
+            {
+                y: "0%", // Desplegar hasta su posición normal
+                zIndex: -20, // Posicionar detrás del footer
+                // delay: 1, // Duración de la animación
+                ease: "power2.out"
+            }
+        )
+    }, [])
+
     return (
-        <footer className="relative flex flex-col justify-start gap-20 items-start w-full px-[5%] mt-32">
-                <div className="flex items-center justify-between w-full">
-                    <img src="/assets/images/brand.webp" alt="logo" className="w-[447px]" />
-                    <h2 className="text-5xl font-semibold"><SpanGradient>¡Tu futuro digital empieza aquí!</SpanGradient></h2>
-                </div>
-                <div className="flex items-center justify-between w-full">
-                    <div className="flex items-center justify-center gap-32">
-                        <div className="flex flex-col gap-y-4 items-start justify-start">
-                            <p><SpanGradient>Empresa</SpanGradient></p>
-                            <p><span>Únete al equipo</span></p>
-                            <p><span>FAQs</span></p>
+        <>
+            <footer 
+                // data-scroll 
+                // data-scroll-speed='-.4' 
+                ref={footerRef}
+                className="relative flex flex-col justify-start items-start w-full px-[5%] mt-32 bg-[#0E1629] rounded-b-2xl z-0 pb-24"
+            >
+                <div className="flex justify-between items-center w-full">
+                    <div className="flex flex-col items-start justify-start w-full">
+                        <div className="flex justify-start items-center gap-5 mb-8">
+                            {iconosRedes.map((item, index) => (
+                                <img key={index} src={item.image} alt="icono redes sociales"  />
+                            ))}
                         </div>
-                        <div className="flex flex-col gap-y-4 items-start justify-start">
-                            <p><SpanGradient>Contáctanos</SpanGradient></p>
-                            <p><span>Únete al equipo</span></p>
-                            <p><span>FAQs</span></p>
+                        <p>Copyright © 2024 Technincoders</p>
+                        <div className="flex gap-x-10 justify-around items-center">
+                            <p>Política de Privacidad</p>
+                            <p>Términos y Condiciones</p>
+                            <p>Política de Cookies</p>
+                            <p>Aviso Legal</p>
+                            
                         </div>
-                        <div className="flex flex-col gap-y-4 items-start justify-start">
-                            <p><SpanGradient>Dirección</SpanGradient></p>
-                            <p><span>Únete al equipo</span></p>
-                            <p>v<span>FAQs</span></p>
-                        </div>
-                        
                     </div>
-                    <div className="flex justify-start items-center gap-10">
-                        {iconosRedes.map((item, index) => (
-                            <img key={index} src={item.image} alt="icono redes sociales"  />
-                        ))}
+                    <div>
+                        <p>Barcelona</p>
+                        <p>Calle Vilamarí 81, 7º - 3ª, Eixample</p>
+                        <p>+34 123 456 789</p>
                     </div>
-                </div>              
-                <div className="flex items-center justify-around w-full text-[#898989]">
-                    <div className="flex items-center justify-around gap-5">
-                        <span className="text-[14px]">Política de Privacidad</span> 
-                        <span className="text-[14px]">Términos y Condiciones</span> 
-
-                    </div>
-                    <span className="text-[14px]">Copyright © 2024 Technincoders</span> 
-                    <div className="flex items-center justify-around gap-5">
-                        <span className="text-[14px]">Política de Coockies</span> 
-                        <span className="text-[14px]">Aviso Legal</span> 
-
-                    </div>
-                </div>              
+                </div>            
             </footer>
+            
+            <div
+               ref={sectionRef}
+                className="relative flex justify-center items-center w-full bg-[#06D5B9] -z-20 -mt-9 px-[5%] py-[5%] font-bold"
+            >
+                <h2 className="text-[160px] text-center leading-none uppercase">
+                    Comienza tu futuro digital
+                </h2>
+            </div>       
+           
+        </>
     )
 }
