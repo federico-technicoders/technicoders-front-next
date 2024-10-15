@@ -60,18 +60,18 @@ export const VideoSection = () => {
                 ease: "power2.out",
             }
         )
-        .to(sectionElement, {
-            scale: 0.9, // Se contrae de nuevo
-            borderRadius: "30px", // Vuelven los bordes redondeados
-            duration: 2, // Duración de la contracción
-            ease: "power2.in",
-        })
+        // .to(sectionElement, {
+        //     scale: 0.9, // Se contrae de nuevo
+        //     borderRadius: "30px", // Vuelven los bordes redondeados
+        //     duration: 2, // Duración de la contracción
+        //     ease: "power2.in",
+        // })
     })
 
     return (
         <section  
             
-            className="relative flex justify-start items-start w-full h-[400vh] text-white bg-transparent -z-0"
+            className="relative flex justify-start items-start w-full h-[400vh] text-white bg-white -z-0"
         >
             <video 
                 ref={sectionRef}
