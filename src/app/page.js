@@ -21,6 +21,7 @@ import {
 } from "@/components/Home"
 // import '@fontsource-variable/red-hat-display'
 import 'swiper/css'
+import { SolutionSection } from '@/components'
 
 if (typeof window !== 'undefined') {
     gsap.registerPlugin(ScrollTrigger, useGSAP);
@@ -164,7 +165,8 @@ export default function Home() {
                 <CoheteSection />
                 <SocioEstrategicoSection />
                 <VideoSection />
-                <SolucionesSection/>
+                {/* <SolucionesSection/> */}
+                <SolutionSection/>
                 <CompaniasSection/>
                 <EquipoSection />
                 <TecnologiasSection />

@@ -6,10 +6,10 @@ export const SolucionesSection = () => {
     return (
         <SectionPage>
             <div className="flex justify-center items-start w-full text-white px-[5%] py-[10%]">
-            <div 
-                    className="absolute top-0 right-0 text-[#A8A8A852] uppercase text-8xl font-extrabold"
-                >
-                    Transformación
+                <div 
+                        className="absolute top-0 right-0 text-[#A8A8A852] uppercase text-8xl font-extrabold"
+                    >
+                        Transformación
                 </div>
                 <article className="flex flex-col items-start justify-center  gap-y-10 w-1/2 h-screen pr-[5%]">
                     <h2 className="text-[90px] leading-none font-semibold">
