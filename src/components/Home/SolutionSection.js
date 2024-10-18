@@ -1,6 +1,6 @@
 'use client'
 
-import { useRef, useEffect, useState } from "react"
+import { useRef } from "react"
 import gsap from "gsap"
 import { ScrollTrigger, ScrollToPlugin } from "gsap/all"
 import { useGSAP } from "@gsap/react"
@@ -93,7 +93,7 @@ export const SolutionSection = () => {
                         </span>                             
                     </h2>
                     <p className="text-xl">
-                    Lorem Ipsum is simply dummy text of the printing<br/> and typesetting industry. Lorem Ipsum has been<br/> the industry's standard dummy text.
+                    Lorem Ipsum is simply dummy text of the printing<br/> and typesetting industry. Lorem Ipsum has been<br/> the industry's standard dummy text.
                     </p>
                     <ButtonCto>
                         Quiero impulsar mi negocio
