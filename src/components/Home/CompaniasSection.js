@@ -6,6 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { SectionPage } from "../SectionPage/SectionPage"
 import { SpanGradient } from "../ui/SpanGradient/SpanGradient"
 import { logosEmpresas } from "@/utils/logosEmpresas"
+import { TecnologiasImages } from "./TecnologiasSection"
 
 const Logo = ({item}) => {
     return (<img src={item.image} alt="logo" className="w-[120px]" loading="lazy"/>)
@@ -13,10 +14,10 @@ const Logo = ({item}) => {
 
 const Logos = ({logosEmpresas}) => {
     return (
-        <div className="flex justify-around items-start w-full mt-24">
-            {logosEmpresas.map((item, index) => (
-                <Logo key={index} item={item} />
-            ))}                   
+        <div className="flex justify-around items-center w-full mt-24">
+          
+                <TecnologiasImages tecnologiasImages={logosEmpresas} time={8} />    
+                   
         </div>
     )
 }
@@ -36,7 +37,7 @@ export const CompaniasSection = () => {
                 scrub: 1, // Anima con el scroll
                 pin: true, // Fijar la sección durante la animación
                 // anticipatePin: 1,
-                markers: true, // Quitar en producción
+                // markers: true, // Quitar en producción
             },
         })
 
@@ -54,12 +55,12 @@ export const CompaniasSection = () => {
                 ease: "power2.out",
             }
         )
-        .to(sectionElement, {
-            scale: 0.9, // Se contrae de nuevo
-            borderRadius: "30px", // Vuelven los bordes redondeados
-            duration: 2, // Duración de la contracción
-            ease: "power2.in",
-        })
+        // .to(sectionElement, {
+        //     scale: 0.9, // Se contrae de nuevo
+        //     borderRadius: "30px", // Vuelven los bordes redondeados
+        //     duration: 2, // Duración de la contracción
+        //     ease: "power2.in",
+        // })
     })
 
     return (

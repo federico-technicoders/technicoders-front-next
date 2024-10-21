@@ -121,7 +121,7 @@ export const SolutionSection = () => {
                         </div>
                         <div
                             ref={card2Ref}
-                            className="absolute w-[90%] h-[70vh] bg-tranparent flex justify-center items-center rounded-[7px] mb-[50px] left-0 top-[10%]"
+                            className="absolute w-[90%] h-[70vh] bg-tranparent flex justify-center items-center rounded-[7px] mb-[50px] left-0 top-[7%]"
                         >
                             <div className="absolute flex flex-col justify-center items-center gap-2 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full p-[10%] mt-10">
                                 <h3 className="font-bold"><SpanGradient>Marketing digital y SEO</SpanGradient></h3>
@@ -131,7 +131,7 @@ export const SolutionSection = () => {
                         </div>
                         <div
                             ref={card3Ref}
-                            className="absolute w-[90%] h-[70vh] bg-tranparent flex justify-center items-center rounded-[7px] mb-[50px] left-0 top-[15%]"
+                            className="absolute w-[90%] h-[70vh] bg-tranparent flex justify-center items-center rounded-[7px] mb-[50px] left-0 top-[9%]"
                         >
                             <div className="absolute flex flex-col justify-center items-center gap-2 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full p-[10%] mt-10">
                                 <h3 className="font-bold"><SpanGradient>Marketing digital y SEO</SpanGradient></h3>

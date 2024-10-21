@@ -83,12 +83,12 @@ export const TecnologiasSection = () => {
                 ease: "power2.out",
             }
         )
-        // .to(sectionElement, {
-        //     scale: 0.9, // Se contrae de nuevo
-        //     borderRadius: "30px", // Vuelven los bordes redondeados
-        //     duration: 2, // Duración de la contracción
-        //     ease: "power2.in",
-        // })
+        .to(sectionElement, {
+            scale: 0.9, // Se contrae de nuevo
+            borderRadius: "30px", // Vuelven los bordes redondeados
+            duration: 2, // Duración de la contracción
+            ease: "power2.in",
+        })
     })
 
     return (

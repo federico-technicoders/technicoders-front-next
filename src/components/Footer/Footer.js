@@ -5,51 +5,37 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { iconosRedes } from "@/utils/iconosRedes"
 import { SpanGradient } from "../ui/SpanGradient/SpanGradient"
 
+gsap.registerPlugin(ScrollTrigger)
 
 
 export const Footer = () => {
     const sectionRef = useRef(null)
     const footerRef = useRef(null)
 
+    useGSAP(() => {
+        const footerRefCurrent = footerRef.current
+        const sectionRefCurrent = sectionRef.current
 
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: footerRefCurrent,
+                start: 'center center',
+                scrub: true,
+                // markers: true                
+            }
+        })
 
-    // useGSAP(() => {
-    //     const sectionElement = sectionRef.current
-    //     const footerElement = footerRef.current
-
-    //     let tl = gsap.timeline({
-    //         scrollTrigger: {
-    //             trigger: footerElement, // Sincronizar con el footer
-    //             start: "bottom bottom", // Empieza al llegar al final del footer
-    //             end: "bottom bottom", // Añadir desplazamiento para controlar cuánto se despliega la sección
-    //             scrub: 2, // Anima con el scroll
-    //             markers: true, // Quitar en producción
-    //         }
-    //     })
-
-    //     // Animación para que la sección aparezca detrás del footer y se despliegue hacia abajo
-    //     tl.fromTo(
-    //         sectionElement,
-    //         {
-    //             y: "-100%", // Posicionar detrás del footer al inicio
-    //             zIndex: -20, // Posicionar detrás del footer
-    //         },
-    //         {
-    //             y: "0%", // Desplegar hasta su posición normal
-    //             zIndex: -20, // Posicionar detrás del footer
-    //             // delay: 1, // Duración de la animación
-    //             ease: "power2.out"
-    //         }
-    //     )
-    // }, [])
-
+        tl.from(sectionRefCurrent, {
+            y: -300,          
+        })
+    
+    })
+//bg-[#0E1629]
     return (
         <>
             <footer 
-                // data-scroll 
-                // data-scroll-speed='-.4' 
                 ref={footerRef}
-                className="relative flex flex-col justify-start items-start w-full px-[5%] mt-32 bg-[#0E1629] rounded-b-2xl z-0 pb-24"
+                className="relative flex flex-col justify-start items-start w-full px-[5%] pt-10 bg-[#0E1629] rounded-b-2xl z-0 pb-24"
             >
                 <div className="flex justify-between items-center w-full">
                     <div className="flex flex-col items-start justify-start w-full">

@@ -5,8 +5,9 @@ import { TitleSection } from "../ui/TitleSection/TitleSection"
 
 
 export const ContactoSection = () => {
+    //bg-[#0E1629]
     return (
-        <section  className="relative flex justify-start items-start w-full  text-white bg-[#0E1629] z-10">
+        <section  className="relative flex justify-start items-start w-full text-white  z-10">
             <div className="flex flex-col justify-start items-center w-full px-[5%] py-[10%] bg-[#0E1629] z-10">
                 <div className="flex flex-col gap-16 w-[60%]">
                 <TitleSection
