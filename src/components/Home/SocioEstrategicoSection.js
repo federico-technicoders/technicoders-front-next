@@ -58,7 +58,7 @@ export const SocioEstrategicoSection = () => {
         
         <section 
             ref={sectionRef}
-            className="relative flex w-full h-screen"
+            className="relative flex w-full h-screen z-10"
         >
             {/* Mitad izquierda fija */}
             <article className="w-1/2 bg-white sticky top-0 h-screen flex justify-center items-center">

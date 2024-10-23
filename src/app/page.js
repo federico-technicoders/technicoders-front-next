@@ -59,56 +59,6 @@ export default function Home() {
                 }
     )})
 
-    useGSAP(() => {           
-            
-        const tl = gsap.timeline({
-            scrollTrigger: {
-                trigger: sectionRef.current,
-                start: 'center center', // Inicia cuando el section esté en el centro
-                end: '+=15%', // Define el rango del scroll
-                scrub: 3,
-                pin: true,
-                // markers: true, // Descomenta para depurar
-            }
-        });
-        
-        // Fase 1: Subir y expandir
-        tl.fromTo(
-            sectionRef.current,
-            { 
-                scale: 0.5, 
-                borderRadius: '26px' }, // Estado inicial (pequeño y redondeado)
-            {
-                scale: 1, // Expande
-                borderRadius: '26px', // Bordes cuadrados
-                duration: 1.5 // Tiempo de expansión
-            }
-        )
-        
-        // Pausa para que se quede ampliado
-        tl.to(boxRef.current, { 
-            scale: 1, 
-            borderRadius: '0px',
-            duration: 3, 
-            ease: "none" 
-        }); // Mantiene el estado ampliado durante 1 segundo
-        
-        // Fase 2: Contraer de nuevo
-        tl.fromTo(
-            boxRef.current,
-            { 
-                scale: 1,
-                borderRadius: '26px', 
-            }, // Estado expandido
-            {
-                scale: 0.9, // Se contrae
-                borderRadius: '26px', // Vuelve a los bordes redondeados si lo deseas
-                duration: 1.5 // Tiempo de contracción
-            }
-        )
-    
-    }, [sectionRef])
-
    
     return (
         <ReactLenis root options={{ lerp: 0.1, duration: 2, smoothTouch: true }}>
@@ -153,14 +103,7 @@ export default function Home() {
                             </video>
                         </div>
                     </section>
-                    {/* <section ref={sectionRef} className="next-section w-full h-screen flex items-center justify-center z-10 bg-[#0E1629] ]">
-                        <div
-                            ref={boxRef}
-                            className="w-full h-screen bg-white flex items-center justify-center"
-                        >
-                            <h2 className="text-white text-2xl text-center">Segunda Sección</h2>
-                        </div>
-                    </section> */}
+                    
                     <SectionVideoPresentation />
                     <CoheteSection />
                     <SocioEstrategicoSection />

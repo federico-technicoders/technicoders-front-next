@@ -6,7 +6,10 @@ import { motion } from 'framer-motion'
 import { SectionPage } from "../SectionPage/SectionPage"
 import { SpanGradient } from "../ui/SpanGradient/SpanGradient"
 import { TitleSection } from "../ui/TitleSection/TitleSection"
-import { tecnologias1, tecnologias2 } from "@/utils/tecnologias"
+import { Marquee } from "./Marquee"
+import { iconElements, iconElements2 } from "@/utils/tecnologias"
+
+
 
 const TecnologiaIcon = ({icon}) => {
     return (    
@@ -98,13 +101,15 @@ export const TecnologiasSection = () => {
                 className="flex flex-col gap-32 items-center justify-center w-full h-screen px-[5%] py-[10%] bg-[#FFF] -z-10 text-black"
             >
                 <TitleSection><SpanGradient>Partners</SpanGradient> tecnológicos</TitleSection> 
-                <div className="w-full">
-                    <div className="flex items-center justify-start w-full h-auto overflow-hidden">
+                <div className="flex flex-col items-center justify-center w-full h-screen">
+                    {/* <div className="flex items-center justify-start w-full h-auto overflow-hidden">
                         <TecnologiasImages tecnologiasImages={tecnologias1} time={15}/>                    
                     </div>  
                     <div className="flex items-center justify-start w-full h-auto overflow-hidden">
                         <TecnologiasImages tecnologiasImages={tecnologias2} time={8} />                    
-                    </div>  
+                    </div>   */}
+                    <Marquee ELEMENTS={iconElements2} />
+                    <Marquee ELEMENTS={iconElements2} isReversed className="mt-8" />
                 </div> 
                
             </div>

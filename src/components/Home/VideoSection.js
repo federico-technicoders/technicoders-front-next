@@ -12,21 +12,21 @@ const video = {
 
 gsap.registerPlugin(ScrollTrigger)
 
-const VideoWraper = ({video}) => {
-    return (
-        <video 
-            autoPlay={true} 
-            playsInline={true} 
-            muted={true} 
-            loop={true} 
-            preload="auto" 
-            poster={video.poster} 
-            className="top-0 left-0 w-full min-w-full h-screen object-cover -z-10"
-        >
-            <source src={video.source} type="video/mp4" />
-        </video>
-    )
-}
+// const VideoWraper = ({video}) => {
+//     return (
+//         <video 
+//             autoPlay={true} 
+//             playsInline={true} 
+//             muted={true} 
+//             loop={true} 
+//             preload="auto" 
+//             poster={video.poster} 
+//             className="top-0 left-0 w-full min-w-full h-screen object-cover -z-10"
+//         >
+//             <source src={video.source} type="video/mp4" />
+//         </video>
+//     )
+// }
 
 export const VideoSection = () => {
     const sectionRef = useRef()
@@ -71,7 +71,7 @@ export const VideoSection = () => {
     return (
         <section  
             
-            className="relative flex justify-start items-start w-full h-[400vh] text-white bg-white -z-0"
+            className="relative flex justify-start items-start w-full h-[400vh] text-white bg-white z-20"
         >
             <video 
                 ref={sectionRef}

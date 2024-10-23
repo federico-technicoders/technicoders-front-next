@@ -5,8 +5,11 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 
 import { SectionPage } from "../SectionPage/SectionPage"
 import { SpanGradient } from "../ui/SpanGradient/SpanGradient"
-import { logosEmpresas } from "@/utils/logosEmpresas"
+
 import { TecnologiasImages } from "./TecnologiasSection"
+import { Marquee } from "./Marquee"
+import { companyIcons } from "@/utils/logosEmpresas"
+
 
 const Logo = ({item}) => {
     return (<img src={item.image} alt="logo" className="w-[120px]" loading="lazy"/>)
@@ -14,10 +17,8 @@ const Logo = ({item}) => {
 
 const Logos = ({logosEmpresas}) => {
     return (
-        <div className="flex justify-around items-center w-full mt-24">
-          
-                <TecnologiasImages tecnologiasImages={logosEmpresas} time={8} />    
-                   
+        <div className="flex items-center justify-start w-full overflow-x-hidden">
+            <TecnologiasImages tecnologiasImages={logosEmpresas} time={8} />                       
         </div>
     )
 }
@@ -67,12 +68,15 @@ export const CompaniasSection = () => {
         <section  className="relative flex justify-start items-start w-full h-[400vh] text-white bg-transparent -z-0">
             <div 
                 ref={sectionRef}
-                className="flex flex-col justify-center items-center top-0 left-0 bg-white w-full h-screen px-[5%] py-[10%]"
+                className="flex flex-col justify-center items-center top-0 left-0 bg-white w-full h-screen px-[5%] py-[10%] overflow-hidden"
             >
-                <h2 className="text-black text-center font-semibold">
+                <h2 className="text-black text-center font-semibold mb-24">
                     Innovamos junto a <SpanGradient>marcas visionarias</SpanGradient> que no solo piensan en el futuro, lo construyen.
                 </h2>
-                <Logos logosEmpresas={logosEmpresas} />
+                <div className="flex flex-col items-center justify-center w-full h-screen">
+                    <Marquee ELEMENTS={companyIcons} height={150} />
+                </div>
+                {/* <Logos logosEmpresas={logosEmpresas} /> */}
             </div>            
         </section>
     )

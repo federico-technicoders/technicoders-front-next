@@ -18,12 +18,13 @@ export const SectionVideoPresentation = () => {
         let tl = gsap.timeline({
             scrollTrigger: {
                 trigger: sectionElement,
-                start: "top top", // Comienza al llegar al tope
-                end: "+=400%", // Aumenta la duración para que pin esté activo durante toda la animación
-                scrub: 1, // Anima con el scroll
-                pin: true, // Fijar la sección durante la animación
+                start: "top top", 
+                // end: "+=520%", // original 
+                end: "+=620%", 
+                scrub: 1,
+                pin: true,
                 // anticipatePin: 1,
-                // markers: true, // Quitar en producción
+                // markers: true,
             },
         })
 
@@ -31,31 +32,31 @@ export const SectionVideoPresentation = () => {
         tl.fromTo(
             sectionElement,
             {
-                scale: 0.5, // La sección empieza más pequeña
-                borderRadius: "30px", // Bordes redondeados
+                scale: 0.5, 
+                borderRadius: "30px", 
             },
             {
-                scale: 1, // Se expande a pantalla completa
-                borderRadius: "0px", // Bordes rectos
-                duration: 2, // Duración de la expansión
+                scale: 1, 
+                borderRadius: "0px",
+                duration: 2, 
                 ease: "power2.out",
             }
         )
         .to(sectionElement, {
-            scale: 0.9, // Se contrae de nuevo
-            borderRadius: "30px", // Vuelven los bordes redondeados
-            duration: 2, // Duración de la contracción
+            scale: 0.9, 
+            borderRadius: "30px", 
+            duration: 2, 
             ease: "power2.in",
         })   
     })
 
     return (
-        <section  className="relative flex justify-start items-start w-full h-[500vh]  text-white bg-tranparent -z-0">
+        <section  className="relative flex justify-start items-start w-full h-[600vh]  text-white bg-tranparent -z-0">
             <div
                 ref={sectionRef}
                 className="w-full h-screen bg-white flex items-center justify-center"
             >
-                <h2 className="text-white text-2xl text-center">Segunda Sección</h2>
+                <h2 className="text-black text-2xl text-center">Segunda Sección</h2>
             </div>
         </section>
     )

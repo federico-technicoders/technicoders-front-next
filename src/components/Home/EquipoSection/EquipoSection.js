@@ -63,14 +63,14 @@ export const EquipoSection = () => {
                 <TitleSection>Somos el <SpanGradient>equipo</SpanGradient></TitleSection>
                 <Swiper
                     slidesPerView={4}
-                    spaceBetween={30}
+                    spaceBetween={0}
                     freeMode={true}
                   
                     pagination={{
                         clickable: true,
                     }}
                     modules={[FreeMode, Pagination]}
-                    className="mySwiper"
+                    className=""
                 >
                     {/* <EmpleadosList equipo={equipo} /> */}
                     <SwiperSlide>
@@ -133,26 +133,7 @@ export const EquipoSection = () => {
                         </div>
 
                     </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="relative  h-[500px]">
-                            <img src='/assets/images/personal/personal.jpg' alt="logo" className="w-ful h-full" loading="lazy"/>
-                            <div className="absolute bottom-8 flex flex-col justify-center items-center gap-2 w-full">
-                                <h3 className="font-semibold">Federico Osandón</h3>
-                                <p>Desarrollador</p>
-                            </div>
-                        </div>
-
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="relative  h-[500px]">
-                            <img src='/assets/images/personal/personal.jpg' alt="logo" className="w-ful h-full" loading="lazy"/>
-                            <div className="absolute bottom-8 flex flex-col justify-center items-center gap-2 w-full">
-                                <h3 className="font-semibold">Federico Osandón</h3>
-                                <p>Desarrollador</p>
-                            </div>
-                        </div>
-
-                    </SwiperSlide>
+                    
                    
                     
                     

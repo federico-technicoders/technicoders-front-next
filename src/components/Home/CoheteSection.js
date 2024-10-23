@@ -12,26 +12,51 @@ gsap.registerPlugin(ScrollTrigger)
 
 export const CoheteSection = () => {
     const choeteSectionRef = useRef()
-    // useGSAP(()=>{
-    //     let eventos = gsap.timeline({
-    //         scrollTrigger: {
-    //             trigger: choeteSectionRef.current,
-    //             // markers: true,
-    //             scrub: 8,
-    //             pin: true,
-    //             end: 'bottom top',
-    //             pinSpacing: false,
-    //         },
-    //     })
 
-    // })
+    useGSAP(()=>{
+        const choeteSectionRefCurrent = choeteSectionRef.current
+        let tl1 = gsap.timeline({
+            scrollTrigger: {
+                trigger: choeteSectionRefCurrent,
+                start: "top top",
+                end: "+=100%",
+                scrub: 1,
+                pin: true,
+                markers: true, // Quitar en producción
+            },
+        })
+
+        // Sección 3 entra con el mismo tamaño que la sección 2 (achicada)
+        tl1.fromTo(
+            choeteSectionRefCurrent,
+            {
+                scale: 0.9, // Empieza con el mismo tamaño que la sección 2
+                borderRadius: "30px",
+            },
+            {
+                scale: 0.9, // Mantiene el tamaño mientras cubre la sección 2
+                borderRadius: "30px",
+                duration: 1,
+                ease: "none", // Sin efecto adicional mientras cubre
+            },
+            
+        )
+        .to(choeteSectionRefCurrent, {
+            // Sección 3 se agranda para llenar la pantalla
+            scale: 1,
+            borderRadius: "0px",
+            duration: 1,
+            ease: "power2.out",
+        })
+    })
 
     return (
         <section 
             ref={choeteSectionRef}
-            className="cohete-section relative flex justify-start items-start w-full  text-white bg-[#0E1629]"
+            // className="cohete-section relative flex justify-start items-start w-full h-[220vh] text-white bg-[#0E1629]"
+            className="cohete-section relative flex justify-start items-start w-full h-[200vh] text-white bg-[#0E1629]"
         >
-            <div  className="relative px-[5%] py-[10%] w-full">
+            <div  className="relative px-[5%] py-[10%] w-full ">
                 <div className="flex flex-col justify-start items-start gap-8">
                     <h2 className="text-[90px] text-white leading-none font-semibold mt-16">
                         Programa {' '}
