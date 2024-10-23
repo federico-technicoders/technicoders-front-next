@@ -8,48 +8,33 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 gsap.registerPlugin(ScrollTrigger);
 
 
-export const HeroSection = () => {
+export const HeroSection = () => {    
+    const heroSection = useRef()
     
-    const container = useRef()
-    
-    // useGSAP(
-    //     () => {
-            // gsap code here...
-            // gsap.from(container.current, { 
-            //     y: '-1360%' 
-            // }); // <-- automatically reverted
-    //     },
-    //     { scope: container }
-    // )
-
-    // useGSAP(() => {
-    //     const containerCurrent = container.current
-
-    //     const timeLine = gsap.timeline({ 
-    //         scrollTrigger: {
-    //             trigger: containerCurrent,
-    //             start: "bottom bottom",
-    //             end: "+=200%",
-    //             scrub: 1,
-    //             pin: true,
-    //             markers: true,
-    //         }
-    //     })  
-    //     timeLine.fromTo(containerCurrent, 
-    //         {
-    //             scale: 1
-    //         },
-    //         {
-    //             scale: 1,
-    //             duration: 1,
-    //             ease: "power2.out"
-    //         }
-    // )
-    // })
+    useGSAP(() => {
+        const heroSectionCurrent = heroSection.current
+        gsap.fromTo(
+            heroSectionCurrent,  
+            {scale: 1},  
+            {                                  
+                            
+                scrollTrigger: {
+                    trigger: heroSectionCurrent,
+                    start: 'top top',
+                //   endTrigger: heroSection.current, 
+                //   end: 'top center',
+                    end: "+=280%",
+                    pin: true,
+                //   markers: true, 
+                    
+                },    
+                // duration: 1.5              
+            }
+    )})
     
     return (
         <section  
-            ref={ container }
+            ref={ heroSection }
             className="relative fex justify-start items-start w-full  text-white -z-10"
         >
             <div className="relative flex flex-col justify-center items-center w-full h-screen px-[5%] pt-[10%] ">                    

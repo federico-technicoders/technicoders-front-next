@@ -53,6 +53,12 @@ export const SectionVideoPresentation = () => {
             duration: 2, 
             ease: "power2.in",
         })   
+        .to(sectionElement, {
+            scale: 0.9, 
+            borderRadius: "30px", 
+            duration: 2, 
+            ease: "power2.in",
+        })   
     })
 
     return (
