@@ -2,24 +2,50 @@
 import { useRef } from 'react'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
-import { SectionPage } from "../SectionPage/SectionPage"
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+// import { SectionPage } from "../SectionPage/SectionPage"
 
-gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(ScrollTrigger);
 
 
 export const HeroSection = () => {
     
     const container = useRef()
     
-    useGSAP(
-        () => {
+    // useGSAP(
+    //     () => {
             // gsap code here...
-            gsap.from(container.current, { 
-                y: '-1360%' 
-            }); // <-- automatically reverted
-        },
-        { scope: container }
-    )
+            // gsap.from(container.current, { 
+            //     y: '-1360%' 
+            // }); // <-- automatically reverted
+    //     },
+    //     { scope: container }
+    // )
+
+    // useGSAP(() => {
+    //     const containerCurrent = container.current
+
+    //     const timeLine = gsap.timeline({ 
+    //         scrollTrigger: {
+    //             trigger: containerCurrent,
+    //             start: "bottom bottom",
+    //             end: "+=200%",
+    //             scrub: 1,
+    //             pin: true,
+    //             markers: true,
+    //         }
+    //     })  
+    //     timeLine.fromTo(containerCurrent, 
+    //         {
+    //             scale: 1
+    //         },
+    //         {
+    //             scale: 1,
+    //             duration: 1,
+    //             ease: "power2.out"
+    //         }
+    // )
+    // })
     
     return (
         <section  

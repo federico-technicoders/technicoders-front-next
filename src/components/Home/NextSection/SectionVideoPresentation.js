@@ -6,6 +6,11 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 // import { useGsap } from '@gsap/react'
 import { useGSAP } from '@gsap/react'
 
+const video = {
+    poster: '/assets/images/despegue.jpg',
+    source: '/assets/videos/despegue.mp4'
+}
+
 
 export const SectionVideoPresentation = () => {
     const sectionRef = useRef(null)   
@@ -20,7 +25,7 @@ export const SectionVideoPresentation = () => {
                 trigger: sectionElement,
                 start: "top top", 
                 // end: "+=520%", // original 
-                end: "+=620%", 
+                end: "+=600%", 
                 scrub: 1,
                 pin: true,
                 // anticipatePin: 1,
@@ -52,12 +57,24 @@ export const SectionVideoPresentation = () => {
 
     return (
         <section  className="relative flex justify-start items-start w-full h-[600vh]  text-white bg-tranparent -z-0">
-            <div
+            {/* <div
                 ref={sectionRef}
                 className="w-full h-screen bg-white flex items-center justify-center"
             >
-                <h2 className="text-black text-2xl text-center">Segunda Sección</h2>
-            </div>
+                <h2 className="text-black text-2xl text-center">Segunda Sección</h2> */}
+            <video 
+                ref={sectionRef}
+                autoPlay={true} 
+                playsInline={true} 
+                muted={true} 
+                loop={true} 
+                preload="auto" 
+                poster={video.poster} 
+                className="top-0 left-0 w-full min-w-full h-screen object-cover -z-10"
+            >
+                <source src={video.source} type="video/mp4" />
+            </video>
+            {/* </div> */}
         </section>
     )
 }

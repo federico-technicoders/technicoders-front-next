@@ -39,18 +39,18 @@ export default function Home() {
     })
     
     useGSAP(() => {
-            // gsap code here...
+            const heroSectionCurrent = heroSection.current
             gsap.fromTo(
-                heroSection.current,  
+                heroSectionCurrent,  
                 {scale: 1},  
                 {                                  
                               
                     scrollTrigger: {
-                      trigger: heroSection.current,
+                      trigger: heroSectionCurrent,
                       start: 'top top',
                     //   endTrigger: heroSection.current, 
                     //   end: 'top center',
-                      end: "+=280%",
+                      end: "+=390%",
                       pin: true,
                     //   markers: true, 
                       
