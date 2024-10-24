@@ -64,7 +64,7 @@ export const SocioEstrategicoSection = () => {
             <article className="w-1/2 bg-white sticky top-0 h-screen flex justify-center items-center">
                 <h2 className="text-black text-4xl font-bold">Contenido Fijo</h2>
                 <div 
-                    className="absolute flex justify-center items-center -right-[150px] w-[300px] h-[300px] bg-black rounded-2xl z-10"
+                    className="absolute flex justify-center items-center -right-[100px] w-[200px] h-[200px] bg-black rounded-2xl z-10"
                 >
                     <span className="text-9xl font-bold">0{currentSection}</span>
                 </div>

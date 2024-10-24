@@ -9,8 +9,8 @@ gsap.registerPlugin(ScrollTrigger)
 
 
 export const Footer = () => {
-    const sectionRef = useRef(null)
     const footerRef = useRef(null)
+    const sectionRef = useRef(null)
 
     useGSAP(() => {
         const footerRefCurrent = footerRef.current
@@ -19,15 +19,19 @@ export const Footer = () => {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: footerRefCurrent,
-                start: 'center center',
+                start: 'top center',
+                // end: '+=30%',
                 scrub: true,
-                // markers: true                
+            // pin: true,
+                markers: true                
             }
         })
 
-        tl.from(sectionRefCurrent, {
-            y: -300,          
-        })
+        tl.from(sectionRefCurrent, 
+            {
+               yPercent: -50,               
+            }     
+        )
     
     })
 //bg-[#0E1629]
@@ -61,7 +65,7 @@ export const Footer = () => {
             </footer>
             <div
                 ref={sectionRef}
-                className="relative flex justify-center items-center w-full bg-[#06D5B9] -z-20 -mt-20 px-[5%] py-[5%] font-bold"
+                className="relative flex justify-center items-center w-full bg-[#06D5B9] -z-20 -mt-4 px-[5%] py-[5%] font-bold"
             >
                 <h2 className="text-[160px] text-center leading-none uppercase">
                     Comienza tu futuro digital

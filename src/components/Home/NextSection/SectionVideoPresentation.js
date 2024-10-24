@@ -13,16 +13,18 @@ const video = {
 
 
 export const SectionVideoPresentation = () => {
-    const sectionRef = useRef(null)   
+    const sectionRef = useRef(null)
+    const videoRef = useRef(null) 
 
     gsap.registerPlugin(ScrollTrigger,useGSAP)
 
     useGSAP(() => {              
-        const sectionElement = sectionRef.current
+        const sectionRefCurrent = sectionRef.current
+        const videoRefCurrent = videoRef.current
 
         let tl = gsap.timeline({
             scrollTrigger: {
-                trigger: sectionElement,
+                trigger: videoRefCurrent,
                 start: "top top", 
                 // end: "+=520%", // original 
                 end: "+=600%", 
@@ -35,7 +37,7 @@ export const SectionVideoPresentation = () => {
 
         // Primera animación: expandir
         tl.fromTo(
-            sectionElement,
+            videoRefCurrent,
             {
                 scale: 0.5, 
                 borderRadius: "30px", 
@@ -47,13 +49,16 @@ export const SectionVideoPresentation = () => {
                 ease: "power2.out",
             }
         )
-        .to(sectionElement, {
+        .to(sectionRefCurrent, {
+            backgroundColor: 'white'
+        })
+        .to(videoRefCurrent, {
             scale: 0.9, 
             borderRadius: "30px", 
             duration: 2, 
             ease: "power2.in",
         })   
-        .to(sectionElement, {
+        .to(videoRefCurrent, {
             scale: 0.9, 
             borderRadius: "30px", 
             duration: 2, 
@@ -62,14 +67,17 @@ export const SectionVideoPresentation = () => {
     })
 
     return (
-        <section  className="relative flex justify-start items-start w-full h-[600vh]  text-white bg-tranparent -z-0">
+        <section  
+            ref={sectionRef}
+            className="relative flex justify-start items-start w-full h-[600vh]  text-white bg-tranparent -z-0"
+        >
             {/* <div
                 ref={sectionRef}
                 className="w-full h-screen bg-white flex items-center justify-center"
             >
                 <h2 className="text-black text-2xl text-center">Segunda Sección</h2> */}
             <video 
-                ref={sectionRef}
+                ref={videoRef}
                 autoPlay={true} 
                 playsInline={true} 
                 muted={true} 

@@ -16,13 +16,15 @@ export const CoheteSection = () => {
     useGSAP(()=>{
         const choeteSectionRefCurrent = choeteSectionRef.current
         let tl1 = gsap.timeline({
+            backgoundColor: 'black',
             scrollTrigger: {
                 trigger: choeteSectionRefCurrent,
                 start: "top top",
                 end: "+=100%",
                 scrub: 1,
                 pin: true,
-                markers: true, // Quitar en producción
+                pinSpacing: false,
+                // markers: true, // Quitar en producción
             },
         })
 
@@ -52,11 +54,11 @@ export const CoheteSection = () => {
 
     return (
         <section 
-            ref={choeteSectionRef}
+            
             // className="cohete-section relative flex justify-start items-start w-full h-[220vh] text-white bg-[#0E1629]"
-            className="cohete-section relative flex justify-start items-start w-full h-[200vh] text-white bg-[#0E1629]"
+            className="cohete-section relative flex justify-start items-start w-full h-[200vh] text-white"
         >
-            <div  className="relative px-[5%] py-[10%] w-full ">
+            <div ref={choeteSectionRef} className="relative px-[5%] py-[10%] w-full min-h-screen  bg-[#0E1629]">
                 <div className="flex flex-col justify-start items-start gap-8">
                     <h2 className="text-[90px] text-white leading-none font-semibold mt-16">
                         Programa {' '}
@@ -89,7 +91,14 @@ export const CoheteSection = () => {
                         Saber más
                     </ButtonCto>
                 </div>
-                <img src="/assets/images/cohete.webp" alt="logo" className="absolute right-0 -bottom-24 z-0" data-scroll data-scroll-speed='.3' loading="lazy"/>
+                <img 
+                    src="/assets/images/cohete.webp" 
+                    alt="logo" 
+                    className="absolute -right-10 -bottom-24 z-100" 
+                    data-scroll 
+                    data-scroll-speed='.2' 
+                    loading="lazy"
+                />
             </div>
         </section>
     )

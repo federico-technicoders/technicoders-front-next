@@ -108,8 +108,8 @@ export const TecnologiasSection = () => {
                     <div className="flex items-center justify-start w-full h-auto overflow-hidden">
                         <TecnologiasImages tecnologiasImages={tecnologias2} time={8} />                    
                     </div>   */}
-                    <Marquee ELEMENTS={iconElements2} />
-                    <Marquee ELEMENTS={iconElements2} isReversed className="mt-8" />
+                    <Marquee ELEMENTS={iconElements2} height={60}/>
+                    <Marquee ELEMENTS={iconElements2} isReversed className="mt-8" height={60} />
                 </div> 
                
             </div>

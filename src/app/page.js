@@ -34,18 +34,14 @@ export default function Home() {
 
     useEffect(() => {
         const locomotiveScroll = new LocomotiveScroll()
-
-    })
-    
-   
+    })  
 
    
     return (
         <ReactLenis root options={{ lerp: 0.1, duration: 2, smoothTouch: true }}>
             <div className="items-center justify-items-center w-full min-h-screen font-[family-name:var(--font-geist-sans)]">
                 <NavBar />
-                <main className="relative flex flex-col w-full min-h-screen row-start-2 items-center sm:items-start">
-                   
+                <main className="relative flex flex-col w-full min-h-screen row-start-2 items-center sm:items-start">                   
                     <HeroSection />
                     <SectionVideoPresentation />
                     <CoheteSection />
