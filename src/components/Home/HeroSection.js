@@ -3,16 +3,37 @@ import { useRef } from 'react'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-// import { SectionPage } from "../SectionPage/SectionPage"
+import SplitType from 'split-type'
 
 gsap.registerPlugin(ScrollTrigger);
 
 
 export const HeroSection = () => {    
     const heroSection = useRef()
+    const heroTitle1  = useRef()
+    const heroTitle2  = useRef()
     
     useGSAP(() => {
         const heroSectionCurrent = heroSection.current
+        const heroTitle1Current  = heroTitle1.current
+        const heroTitle2Current  = heroTitle2.current
+
+        const heroTitleSplit1    = new SplitType(heroTitle1Current)
+        const heroTitleSplit2    = new SplitType(heroTitle2Current)
+
+        gsap.set([...heroTitleSplit1.chars, ...heroTitleSplit2.chars], {y: 220})
+
+        gsap.to([...heroTitleSplit1.chars, ...heroTitleSplit2.chars], {
+            y: 0,
+            stagger: 0.05,
+            delay: 0.2,
+            duration: 0.6,
+            ease: "power2.out",
+            // onComplete: () => {
+            //     heroTitle2Current.classList.add('bg-gradient-to-r', 'from-teal-400', 'to-cyan-400', 'text-transparent', 'bg-clip-text');
+            // }
+        })
+
         gsap.fromTo(
             heroSectionCurrent,  
             {scale: 1},  
@@ -35,18 +56,33 @@ export const HeroSection = () => {
     return (
         <section  
             ref={ heroSection }
-            className="relative fex justify-start items-start w-full  text-white -z-10"
+            className="relative fex justify-start items-start w-full text-white -z-10"
         >
             <div className="relative flex flex-col justify-center items-center w-full h-screen px-[5%] pt-[10%] ">                    
                 <div 
                     
-                    className="relative flex flex-col gap-y-20 items-end justify-start w-[100%] h-full"
+                    className="relative flex flex-col gap-y-20 items-end justify-start w-[100%] h-screen"
                 >
-                    <div className="absolute left-0 bottom-0 flex flex-col gap- items-start justify-start w-[100%]">
+                    <div className="absolute left-0 bottom-0 flex flex-col  items-start justify-start w-[100%] h-full">
                         <h1 className="text-2xl">Agencia de marketing digital y diseño web</h1> 
-                        <span className="text-[220px] font-bold leading-none">
-                            Impulsamos <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-cyan-400"><br />tu </span> <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-cyan-400">Negocio</span>
-                        </span>  
+                        <div className='flex flex-col items-start justify-start w-full '>
+                            <span 
+                                ref={heroTitle1} 
+                                style={{ clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0% 100%)' }} 
+                                className="text-[220px] font-bold leading-none text-nowrap"
+                            >
+                                Impulsamos
+                            </span>  
+                            {/* text-transparent */}
+                            <span 
+                                className=" text-[220px] font-bold bg-clip-text  bg-gradient-to-r from-teal-400 to-cyan-400 text-nowrap"
+                                ref={heroTitle2} 
+                                style={{ clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0% 100%)'}} 
+                            >
+                                Tu Negocio
+                            </span>
+
+                        </div>
                     </div>                       
                     {/* <button 
                         className="px-[20px] py-[5px] border-[3px] border-cyan-400 rounded-full"

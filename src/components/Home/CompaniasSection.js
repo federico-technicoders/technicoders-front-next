@@ -65,7 +65,7 @@ export const CompaniasSection = () => {
     })
 
     return (
-        <section  className="relative flex justify-start items-start w-full h-[400vh] text-white bg-transparent -z-0">
+        <section  className="relative flex justify-start items-start w-full h-[400vh] text-white bg-[#0E1629] -z-0">
             <div 
                 ref={sectionRef}
                 className="flex flex-col justify-center items-center top-0 left-0 bg-white w-full h-screen px-[5%] py-[10%] overflow-hidden"

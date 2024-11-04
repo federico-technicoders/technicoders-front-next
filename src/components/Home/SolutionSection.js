@@ -79,13 +79,13 @@ export const SolutionSection = () => {
 
     return (
         <section ref={sectionRef} className="relative flex justify-start items-start w-full  text-white bg-[#0E1629] -z-0">
-            <div className="flex justify-center items-start w-full text-white px-[5%] py-[5%]">
+            <div className="relative flex justify-center items-start w-full text-white px-[5%] py-[5%]">
                 <div 
                         className="absolute top-0 right-0 text-[#A8A8A852] uppercase text-8xl font-extrabold"
                     >
                         Transformación
                 </div>
-                <article className="w-1/2 bg-blue fixed top-0 left-0 h-screen flex flex-col justify-center items-start gap-y-10 px-[5%]">
+                <article className="h-screen flex flex-col justify-center items-start gap-y-10 px-[5%] w-1/2 bg-blue">
                     <h2 className="text-[90px] leading-none font-semibold">
                         Nuestras <br />
                         <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-cyan-400">
@@ -93,15 +93,15 @@ export const SolutionSection = () => {
                         </span>                             
                     </h2>
                     <p className="text-xl">
-                    Lorem Ipsum is simply dummy text of the printing<br/> and typesetting industry. Lorem Ipsum has been<br/> the industrys standard dummy text.
+                        Lorem Ipsum is simply dummy text of the printing<br/> and typesetting industry. Lorem Ipsum has been<br/> the industrys standard dummy text.
                     </p>
                     <ButtonCto>
                         Quiero impulsar mi negocio
                     </ButtonCto>
                 </article>
 
-                {/* Mitad derecha con múltiples secciones */}
-                <aside className=" text-white font-slussen w-1/2 min-h-screen ml-[50%]">
+                {/* Mitad derecha con múltiples secciones */} 
+                <aside className=" text-white font-slussen w-1/2 min-h-screen">
                     <div
                         ref={cardsRef}
                         className="h-screen w-full m-auto relative flex justify-start items-center"

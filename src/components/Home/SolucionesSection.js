@@ -5,7 +5,7 @@ import { SpanGradient } from "../ui/SpanGradient/SpanGradient"
 export const SolucionesSection = () => {
     return (
         <SectionPage>
-            <div className="flex justify-center items-start w-full text-white px-[5%] py-[10%]">
+            <div className="relative flex justify-center items-start w-full text-white px-[5%] py-[10%]">
                 <div 
                         className="absolute top-0 right-0 text-[#A8A8A852] uppercase text-8xl font-extrabold"
                     >
