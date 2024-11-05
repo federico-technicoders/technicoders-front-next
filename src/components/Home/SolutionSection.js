@@ -86,7 +86,7 @@ export const SolutionSection = () => {
                         Transformación
                 </div>
                 <article className="h-screen flex flex-col justify-center items-start gap-y-10 px-[5%] w-1/2 bg-blue">
-                    <h2 className="text-[90px] leading-none font-semibold">
+                    <h2 className="text-[30px] md:text-[60px] lg:text-[90px] leading-none font-semibold">
                         Nuestras <br />
                         <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-cyan-400">
                             soluciones

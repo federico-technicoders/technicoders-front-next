@@ -70,7 +70,7 @@ export const CompaniasSection = () => {
                 ref={sectionRef}
                 className="flex flex-col justify-center items-center top-0 left-0 bg-white w-full h-screen px-[5%] py-[10%] overflow-hidden"
             >
-                <h2 className="text-black text-center font-semibold mb-24">
+                <h2 className="text-[30px] md:text-[60px] lg:text-[90px] text-black text-center font-semibold mb-24">
                     Innovamos junto a <SpanGradient>marcas visionarias</SpanGradient> que no solo piensan en el futuro, lo construyen.
                 </h2>
                 <div className="flex flex-col items-center justify-center w-full h-screen">

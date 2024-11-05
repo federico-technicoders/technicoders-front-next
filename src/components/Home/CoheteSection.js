@@ -60,7 +60,7 @@ export const CoheteSection = () => {
         >
             <div ref={choeteSectionRef} className="relative px-[5%] py-[10%] w-full min-h-screen  bg-[#0E1629]">
                 <div className="flex flex-col justify-start items-start gap-8">
-                    <h2 className="text-[90px] text-white leading-none font-semibold mt-16">
+                    <h2 className="text-[30px] md:text-[60px] lg:text-[90px] text-white leading-none font-semibold mt-16">
                         Programa {' '}
                         <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-cyan-400">
                             despegue

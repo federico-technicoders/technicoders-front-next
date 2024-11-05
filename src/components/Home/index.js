@@ -1,6 +1,6 @@
 
 
-export { HeroSection } from './HeroSection.js'
+export { HeroSection } from './HeroSection/HeroSection.js'
 export { SectionVideoPresentation } from './NextSection/SectionVideoPresentation.js'
 export { CoheteSection } from './CoheteSection.js'
 export { SolucionesSection } from './SolucionesSection.js'

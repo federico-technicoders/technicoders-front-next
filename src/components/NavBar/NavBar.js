@@ -27,9 +27,9 @@ export const NavBar = () => {
     return (
         <header className="fixed flex top-8 left-0 w-full items-center justify-center z-50">
                 <div className="flex items-center justify-start w-[90%] bg-[#0e1629bf] rounded-3xl px-[60px] py-2">
-                    <img src="/assets/images/brand.webp" alt="logo" className="w-[191px]" />
+                    <img src="/assets/images/brand.webp" alt="logo" className="w-[100px] lg:w-[191px]" />
                     <nav className="w-[100%] flex items-center justify-around">
-                        <ul className="flex gap-x-16 items-center justify-center text-xl">
+                        <ul className="hidden lg:flex gap-x-16 items-center justify-center text-xl">
                             {
                                 links.map((item, index) => (
                                     <li key={index}>

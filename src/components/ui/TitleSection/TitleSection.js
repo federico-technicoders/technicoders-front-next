@@ -4,7 +4,7 @@ export const TitleSection = ({children}) => {
     return (
         
         <h2 
-            // className={ 'leading-none font-bold'}
+            className='text-[30px] md:text-[60px] lg:text-[90px]'
         >
         
             {children}

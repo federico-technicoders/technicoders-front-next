@@ -4,6 +4,7 @@ import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SplitType from 'split-type'
+import './HeroSection.css'
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -21,9 +22,9 @@ export const HeroSection = () => {
         const heroTitleSplit1    = new SplitType(heroTitle1Current)
         const heroTitleSplit2    = new SplitType(heroTitle2Current)
 
-        gsap.set([...heroTitleSplit1.chars, ...heroTitleSplit2.chars], {y: 220})
+        gsap.set([ ...heroTitleSplit1.chars, ...heroTitleSplit2.chars ], { y: 400 })
 
-        gsap.to([...heroTitleSplit1.chars, ...heroTitleSplit2.chars], {
+        gsap.to([ ...heroTitleSplit1.chars, ...heroTitleSplit2.chars ], {
             y: 0,
             stagger: 0.05,
             delay: 0.2,
@@ -61,21 +62,21 @@ export const HeroSection = () => {
             <div className="relative flex flex-col justify-center items-center w-full h-screen px-[5%] pt-[10%] ">                    
                 <div 
                     
-                    className="relative flex flex-col gap-y-20 items-end justify-start w-[100%] h-screen"
+                    className="relative flex flex-col gap-y-20 items-start justify-start w-[100%] h-screen"
                 >
-                    <div className="absolute left-0 bottom-0 flex flex-col  items-start justify-start w-[100%] h-full">
+                    <div className="absolute left-0 bottom-0 flex flex-col justify-end items-start w-[100%] h-full">
                         <h1 className="text-2xl">Agencia de marketing digital y diseño web</h1> 
                         <div className='flex flex-col items-start justify-start w-full '>
                             <span 
                                 ref={heroTitle1} 
                                 style={{ clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0% 100%)' }} 
-                                className="text-[220px] font-bold leading-none text-nowrap"
+                                className="text-[55px]  md:text-[152px]  lg:text-[220px] font-bold leading-none text-nowrap"
                             >
                                 Impulsamos
                             </span>  
                             {/* text-transparent */}
                             <span 
-                                className=" text-[220px] font-bold bg-clip-text  bg-gradient-to-r from-teal-400 to-cyan-400 text-nowrap"
+                                className="text-[55px] md:text-[152px] lg:text-[220px] font-bold bg-clip-text  bg-gradient-to-r from-teal-400 to-cyan-400 text-nowrap"
                                 ref={heroTitle2} 
                                 style={{ clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0% 100%)'}} 
                             >
