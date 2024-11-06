@@ -52,18 +52,18 @@ export const SectionVideoPresentation = () => {
         .to(sectionRefCurrent, {
             backgroundColor: 'white'
         })
-        .to(videoRefCurrent, {
-            scale: 0.9, 
-            borderRadius: "30px", 
-            duration: 2, 
-            ease: "power2.in",
-        })   
-        .to(videoRefCurrent, {
-            scale: 0.9, 
-            borderRadius: "30px", 
-            duration: 2, 
-            ease: "power2.in",
-        })   
+        // .to(videoRefCurrent, {
+        //     scale: 0.9, 
+        //     borderRadius: "30px", 
+        //     duration: 2, 
+        //     ease: "power2.in",
+        // })   
+        // .to(videoRefCurrent, {
+        //     scale: 0.9, 
+        //     borderRadius: "30px", 
+        //     duration: 2, 
+        //     ease: "power2.in",
+        // })   
     })
 
     return (

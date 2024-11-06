@@ -4,6 +4,8 @@ import localFont from "next/font/local"
 // Supports weights 300-900
 // import redHat from '@fontsource-variable/red-hat-display'
 import "./globals.css"
+import { NavBar } from "@/components/NavBar/NavBar"
+import { Footer } from "@/components/Footer"
 // import Head from "next/head"
 
 const geistSans = localFont({
@@ -35,7 +37,9 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white`}
       >
+        <NavBar />
         {children}
+        <Footer />
       </body>
     </html>
   )

@@ -15,7 +15,7 @@ import {
     HeroSection, 
     SectionVideoPresentation,
     SocioEstrategicoSection, 
-    SolucionesSection, 
+    // SolucionesSection, 
     TecnologiasSection, 
     TestimonioSection, 
     VideoSection 
@@ -47,7 +47,7 @@ export default function Home() {
                     <CoheteSection />
                     <SocioEstrategicoSection />
                     <VideoSection />
-                    {/* <SolucionesSection/> */}
+                  
                     <SolutionSection/>
                     <CompaniasSection/>
                     <EquipoSection />

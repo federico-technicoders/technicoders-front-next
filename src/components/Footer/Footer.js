@@ -1,3 +1,4 @@
+'use client'
 import { useRef } from "react"
 import { useGSAP } from "@gsap/react"
 import gsap from 'gsap'
@@ -22,8 +23,8 @@ export const Footer = () => {
                 start: 'top center',
                 // end: '+=30%',
                 scrub: true,
-            // pin: true,
-                markers: true                
+                // pin: true,
+                // markers: true                
             }
         })
 
@@ -67,7 +68,7 @@ export const Footer = () => {
                 ref={sectionRef}
                 className="relative flex justify-center items-center w-full bg-[#06D5B9] -z-20 -mt-4 px-[5%] py-[5%] font-bold"
             >
-                <h2 className="text-[160px] text-center leading-none uppercase">
+                <h2 className="text-[60px] md:text-[100px] lg:text-[160px] text-center leading-none uppercase">
                     Comienza tu futuro digital
                 </h2>
             </div>       
